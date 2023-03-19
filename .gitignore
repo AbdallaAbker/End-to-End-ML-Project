@@ -1,1 +1,29 @@
+# Compiled files
+*.pyc
+*.class
+*.o
+
+# Editor and IDE files
+.vscode
+.idea
+.emacs.d
+*~
+
+# Dependency and build files
+node_modules/
+mlenv/
+pipenv/
+yarn.lock
+Gemfile.lock
+gradle.build
+
+# System and temporary files
+.DS_Store
+Thumbs.db
+.tmp
+
+# Credentials and secrets
+config.ini
+secrets.json
+private.key
 
