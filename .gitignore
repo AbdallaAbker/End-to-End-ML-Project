@@ -16,6 +16,8 @@ pipenv/
 yarn.lock
 Gemfile.lock
 gradle.build
+ml_project.egg-info/
+
 
 # System and temporary files
 .DS_Store
