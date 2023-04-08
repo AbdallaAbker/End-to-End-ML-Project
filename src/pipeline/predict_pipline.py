@@ -10,7 +10,7 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            model_path = '/app/artifacts/model.pkl'
+            model_path = '/app/artifacts/model.pkl'  ## if running locally not on docker use this path  model_path='artifacts\model.pkl' &  preprocessor_path='artifacts\preprocessor.pkl'
             preprocessor_path='/app/artifacts/preprocessor.pkl'
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
