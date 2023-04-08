@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Test Score Predictor</h1>
+		<form method="post" action="{{ url_for('predict_datapoint') }}">
+			<div>
+				<label for="gender">Gender</label>
+				<select name="gender" id="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+			</div>
+			<div>
+				<label for="ethnicity">Race/Ethnicity</label>
+				<select name="ethnicity" id="ethnicity">
+					<option value="group A">Group A</option>
+					<option value="group B">Group B</option>
+					<option value="group C">Group C</option>
+					<option value="group D">Group D</option>
+					<option value="group E">Group E</option>
+				</select>
+			</div>
+			<div>
+				<label for="parental_level_of_education">Parental Level of Education</label>
+				<select name="parental_level_of_education" id="parental_level_of_education">
+					<option value="some high school">Some High School</option>
+					<option value="high school">High School</option>
+					<option value="some college">Some College</option>
+					<option value="associate's degree">Associate's Degree</option>
+					<option value="bachelor's degree">Bachelor's Degree</option>
+					<option value="master's degree">Master's Degree</option>
+				</select>
+			</div>
+			<div>
+				<label for="lunch">Lunch</label>
+				<select name="lunch" id="lunch">
+					<option value="standard">Standard</option>
+					<option value="free/reduced">Free/Reduced</option>
+				</select>
+			</div>
+			<div>
+				<label for="test_preparation_course">Test Preparation Course</label>
+				<select name="test_preparation_course" id="test_preparation_course">
+					<option value="none">None</option>
+					<option value="completed">Completed</option>
+				</select>
+			</div>
+			<div>
+				<label for="reading_score">Reading Score</label>
+				<input type="number" name="reading_score" id="reading_score" required>
+			</div>
+			<div>
+				<label for="writing_score">Writing Score</label>
+				<input type="number" name="writing_score" id="writing_score" required>
+			</div>
+			<input type="submit" value="Predict">
+		</form>
+		{% if results %}
+		<h2>The predicted score is {{ results }}</h2>
+		{% endif %}
+	</div>
+</body>
+</html>
