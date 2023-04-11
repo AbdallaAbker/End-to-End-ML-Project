@@ -13,5 +13,4 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 # Container port on which the server will be listening
 EXPOSE 5000
 
-
 CMD ["python", "app.py"]
